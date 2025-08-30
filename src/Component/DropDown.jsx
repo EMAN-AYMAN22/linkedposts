@@ -59,7 +59,8 @@ export default function DropDown({ commentid, postid, callback, callbackk,setIsU
           <DropdownMenu aria-label="Static Actions">
             <DropdownItem onClick={()=>setIsUpdating(true)} key="edit">Edit</DropdownItem>
             <DropdownItem
-              onClick={() => {deleteComment(commentid)}}
+             onClick={() =>commentid? deleteComment(commentid): deletePost(postid)}
+
               key="delete"
               className="text-danger"
               color="danger"
