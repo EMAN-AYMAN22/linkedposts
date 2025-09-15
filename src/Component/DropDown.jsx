@@ -34,9 +34,7 @@ export default function DropDown({ commentid, postid, callback, callbackk,setIsU
 
   return (
     <>
-      {loading ? (
-        <Spinner />
-      ) : (
+      {loading ? <Spinner /> : 
         <Dropdown>
           <DropdownTrigger>
             <svg
@@ -69,7 +67,7 @@ export default function DropDown({ commentid, postid, callback, callbackk,setIsU
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-      )}
+      }
     </>
   );
 }
