@@ -32,6 +32,7 @@ export default function PostCard({ post, commentLimit, callback }) {
   }
   return (
     <>
+       {isUpdating ? <CreatePost callback={callback} post={post} isUpdating={isUpdating} setIsUpdating={setIsUpdating}/>:
       <div className=" w-full flex flex-col px-3 lg:px-10">
         <div className="bg-white w-full rounded-md shadow-md h-auto py-3 px-3 my-5 overflow-hidden">
           <div className="w-full h-16 flex items-center  justify-between ">
